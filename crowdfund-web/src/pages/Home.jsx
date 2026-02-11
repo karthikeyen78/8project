@@ -81,19 +81,30 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Stats Board (Glassmorphism) - Could be dynamic later */}
-            <section className="container" style={{ margin: '2rem auto 5rem' }}>
-                <div className="glass-panel" style={{
-                    display: 'flex',
-                    justifyContent: 'space-around',
-                    padding: '2rem',
-                    textAlign: 'center',
-                    border: '1px solid rgba(255,255,255,0.05)'
-                }}>
-                    <div>
-                        <div style={{ fontSize: '2.5rem', fontWeight: '700', color: 'var(--color-main)' }}>{campaigns.length}</div>
-                        <div style={{ color: 'var(--color-text-muted)' }}>Active Campaigns</div>
-                    </div>
+            {/* How it Works Section */}
+            <section className="container" style={{ padding: '5rem 1rem', textAlign: 'center' }}>
+                <h2 style={{ fontSize: '2.5rem', fontWeight: '700', marginBottom: '3rem' }}>How It Works</h2>
+                <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+                    {[
+                        { icon: '💼', title: 'Connect Wallet', desc: 'Link your crypto wallet like MetaMask to get started.' },
+                        { icon: '🔎', title: 'Choose Campaign', desc: 'Browse verified projects and select one to support.' },
+                        { icon: '⛓️', title: 'Track on Chain', desc: 'See exactly how your funds are used with blockchain transparency.' }
+                    ].map((item, index) => (
+                        <div key={index} style={{ flex: '1 1 300px', maxWidth: '350px' }}>
+                            <div style={{
+                                width: '80px', height: '80px',
+                                background: 'var(--color-surface-hover)',
+                                borderRadius: '50%',
+                                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                fontSize: '2rem', margin: '0 auto 1.5rem',
+                                border: '1px solid var(--border-color)'
+                            }}>
+                                {item.icon}
+                            </div>
+                            <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>{item.title}</h3>
+                            <p style={{ color: 'var(--color-text-secondary)' }}>{item.desc}</p>
+                        </div>
+                    ))}
                 </div>
             </section>
 
@@ -207,30 +218,19 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* How it Works Section */}
-            <section className="container" style={{ padding: '5rem 1rem', textAlign: 'center' }}>
-                <h2 style={{ fontSize: '2.5rem', fontWeight: '700', marginBottom: '3rem' }}>How It Works</h2>
-                <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap', justifyContent: 'center' }}>
-                    {[
-                        { icon: '💼', title: 'Connect Wallet', desc: 'Link your crypto wallet like MetaMask to get started.' },
-                        { icon: '🔎', title: 'Choose Campaign', desc: 'Browse verified projects and select one to support.' },
-                        { icon: '⛓️', title: 'Track on Chain', desc: 'See exactly how your funds are used with blockchain transparency.' }
-                    ].map((item, index) => (
-                        <div key={index} style={{ flex: '1 1 300px', maxWidth: '350px' }}>
-                            <div style={{
-                                width: '80px', height: '80px',
-                                background: 'var(--color-surface-hover)',
-                                borderRadius: '50%',
-                                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                                fontSize: '2rem', margin: '0 auto 1.5rem',
-                                border: '1px solid var(--border-color)'
-                            }}>
-                                {item.icon}
-                            </div>
-                            <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>{item.title}</h3>
-                            <p style={{ color: 'var(--color-text-secondary)' }}>{item.desc}</p>
-                        </div>
-                    ))}
+            {/* Stats Board (Glassmorphism) - Could be dynamic later */}
+            <section className="container" style={{ margin: '2rem auto 5rem' }}>
+                <div className="glass-panel" style={{
+                    display: 'flex',
+                    justifyContent: 'space-around',
+                    padding: '2rem',
+                    textAlign: 'center',
+                    border: '1px solid rgba(255,255,255,0.05)'
+                }}>
+                    <div>
+                        <div style={{ fontSize: '2.5rem', fontWeight: '700', color: 'var(--color-text-main)' }}>{campaigns.length}</div>
+                        <div style={{ color: 'var(--color-text-muted)' }}>Active Campaigns</div>
+                    </div>
                 </div>
             </section>
 

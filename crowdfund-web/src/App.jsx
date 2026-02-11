@@ -6,10 +6,13 @@ import CreateCampaign from './pages/CreateCampaign';
 import CampaignDetails from './pages/CampaignDetails';
 import './index.css';
 
+import ParticlesBackground from './components/ParticlesBackground';
+
 function App() {
   return (
     <Router>
       <div className="App">
+        <ParticlesBackground />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/explore" element={<Explore />} />

@@ -18,9 +18,10 @@ const Navbar = () => {
         justifyContent: 'space-between',
         alignItems: 'center',
         zIndex: 1000,
-        background: 'rgba(10, 11, 30, 0.8)',
-        backdropFilter: 'blur(10px)',
-        borderBottom: '1px solid var(--glass-border)',
+        background: 'rgba(255, 255, 255, 0.6)',
+        backdropFilter: 'blur(20px)',
+        boxShadow: '0 4px 30px rgba(79, 70, 229, 0.1)',
+        borderBottom: '1px solid rgba(255, 255, 255, 0.3)',
     };
 
     const logoStyle = {

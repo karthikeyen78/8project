@@ -1,14 +1,14 @@
 import React from 'react';
 import '../index.css';
 
-const Button = ({ 
-  children, 
-  variant = 'primary', 
-  size = 'md', 
-  onClick, 
+const Button = ({
+  children,
+  variant = 'primary',
+  size = 'md',
+  onClick,
   className = '',
   disabled = false,
-  fullWidth = false 
+  fullWidth = false
 }) => {
   const baseStyles = {
     padding: size === 'sm' ? '0.5rem 1rem' : size === 'lg' ? '1rem 2rem' : '0.75rem 1.5rem',
@@ -36,7 +36,7 @@ const Button = ({
     },
     secondary: {
       background: 'var(--color-surface-hover)',
-      color: 'white',
+      color: 'var(--color-text-main)',
       border: '1px solid var(--border-color)',
     },
     outline: {
@@ -62,7 +62,7 @@ const Button = ({
   // We'll add a 'btn' class for potential global overrides.
 
   return (
-    <button 
+    <button
       className={`btn ${className} ${!disabled ? 'glow-hover' : ''}`}
       style={style}
       onClick={onClick}
